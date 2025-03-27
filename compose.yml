@@ -1,0 +1,7 @@
+services:
+  searxng_fit:
+    build: .
+    container_name: searxng_fit
+    restart: unless-stopped
+    ports:
+        - "8080:8080"
