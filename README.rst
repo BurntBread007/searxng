@@ -2,7 +2,7 @@
 
 ----
 
-.. figure:: https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng.svg
+.. figure:: https://raw.githubusercontent.com/BurntBread007/searxng/master/client/simple/src/brand/searxng.svg
    :target: https://docs.searxng.org/
    :alt: SearXNG
    :width: 100%
@@ -34,7 +34,7 @@ A user_, admin_ and developer_ handbook is available on the homepage_.
 .. _homepage: https://docs.searxng.org/
 .. _metasearch engine: https://en.wikipedia.org/wiki/Metasearch_engine
 
-.. |SearXNG logo| image:: https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng-wordmark.svg
+.. |SearXNG logo| image:: https://raw.githubusercontent.com/BurntBread007/searxng/master/client/simple/src/brand/searxng-wordmark.svg
    :target: https://docs.searxng.org/
    :width: 5%
 
@@ -54,10 +54,10 @@ A user_, admin_ and developer_ handbook is available on the homepage_.
    :target: https://github.com/searxng/searxng/issues
 
 .. |PR| image:: https://img.shields.io/github/issues-pr-raw/searxng/searxng?color=yellow&label=PR
-   :target: https://github.com/searxng/searxng/pulls
+   :target: https://github.com/BurntBread007/searxng/pulls
 
 .. |commits| image:: https://img.shields.io/github/commit-activity/y/searxng/searxng?color=yellow&label=commits
-   :target: https://github.com/searxng/searxng/commits/master
+   :target: https://github.com/BurntBread007/searxng/commits/master
 
 .. |weblate| image:: https://translate.codeberg.org/widgets/searxng/-/searxng/svg-badge.svg
    :target: https://translate.codeberg.org/projects/searxng/
