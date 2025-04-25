@@ -61,6 +61,7 @@ from searx import limiter
 from searx.botdetection import link_token
 
 from searx.data import ENGINE_DESCRIPTIONS
+from searx.data import HOTKEYS
 from searx.result_types import Answer
 from searx.settings_defaults import OUTPUT_FORMATS
 from searx.settings_loader import DEFAULT_SETTINGS_FILE
@@ -1326,6 +1327,14 @@ def config():
         }
     )
 
+@app.route('/hotkey_menu.json', methods=['GET'])
+def hotkey_menu():
+    locale = get_locale().split('_')[0]
+    phrases = HOTKEYS['en'].copy()
+    result = dict()
+    for phrase in phrases:
+        result[phrase] = gettext(phrase) if (locale != 'en') else phrase
+    return jsonify(result)
 
 @app.errorhandler(404)
 def page_not_found(_e):

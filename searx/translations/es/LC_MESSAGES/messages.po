@@ -1722,9 +1722,6 @@ msgstr "ocultar video"
 #~ msgid "Close"
 #~ msgstr "Cerrar"
 
-#~ msgid "Language"
-#~ msgstr "Lenguaje"
-
 #~ msgid "broken"
 #~ msgstr "roto"
 
@@ -1759,9 +1756,6 @@ msgstr "ocultar video"
 
 #~ msgid "Allow all"
 #~ msgstr "Permitir todo"
-
-#~ msgid "Disable all"
-#~ msgstr "Deshabilitar todo"
 
 #~ msgid "Selected language"
 #~ msgstr "Idioma elegido"
@@ -1820,20 +1814,8 @@ msgstr "ocultar video"
 #~ msgid "Something went wrong."
 #~ msgstr "Algo ha ido mal."
 
-#~ msgid "Date"
-#~ msgstr "Fecha"
-
-#~ msgid "Type"
-#~ msgstr "Tipo"
-
 #~ msgid "Get image"
 #~ msgstr "Obtener imagen"
-
-#~ msgid "Center Alignment"
-#~ msgstr ""
-
-#~ msgid "Displays results in the center of the page (Oscar layout)."
-#~ msgstr ""
 
 #~ msgid "preferences"
 #~ msgstr "preferencias"
@@ -1926,9 +1908,6 @@ msgstr "ocultar video"
 
 #~ msgid "Shortcut"
 #~ msgstr "Atajo"
-
-#~ msgid "!bang"
-#~ msgstr "!bang"
 
 #~ msgid ""
 #~ "This tab dues not exists in the"
@@ -2102,3 +2081,71 @@ msgstr "ocultar video"
 
 #~ msgid "/"
 #~ msgstr ""
+
+# Hotkey Help Menu Translations
+
+msgid "select previous search result"
+msgstr "elegir el resultado de la búsqueda anterior"
+
+msgid "select next search result"
+msgstr "elegir el resultado de la búsqueda próximo"
+
+msgid "copy url of the selected result to the clipboard"
+msgstr "copiar el url del resultado seleccionado en el portapapeles"
+
+msgid "go to next page"
+msgstr "ir a la página próxima"
+
+msgid "open search result"
+msgstr "abrir el resultado de la búsqueda"
+
+msgid "go to previous page"
+msgstr "ir a la página anterior"
+
+msgid "open the result in a new tab"
+msgstr "abrir el resultado en un pestaña nueva"
+
+msgid "toggle help window"
+msgstr "pasar la pantalla de ayuda"
+
+msgid "remove focus from the focused input"
+msgstr "quitar el enfoque de la entrada enfocado"
+
+msgid "focus on the search input"
+msgstr "enfocar en la entrada de la búsqueda"
+
+msgid "reload page from the server"
+msgstr "recargar la página del servidor"
+
+msgid "How to navigate SearXNG with hotkeys"
+msgstr "Cómo navegar SearXNG con teclas de acceso rápido"
+
+msgid "scroll one page up"
+msgstr "mover una página arriba"
+
+msgid "scroll one page down"
+msgstr "mover una página abaja"
+
+msgid "scroll half a page up"
+msgstr "mover una media página arriba"
+
+msgid "scroll half a page down"
+msgstr "mover una media página abaja"
+
+msgid "scroll to the top of the page"
+msgstr "mover a la cima de la página"
+
+msgid "scroll to the bottom of the page"
+msgstr "mover al final de la página"
+
+msgid "Results"
+msgstr "Resultados"
+
+msgid "Other"
+msgstr "Otro"
+
+msgid "Control"
+msgstr "Control"
+
+msgid "Navegation"
+msgstr "Navegación"

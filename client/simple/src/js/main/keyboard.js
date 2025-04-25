@@ -378,7 +378,7 @@ searxng.ready(function () {
     };
   }
 
-  function initHelpContent (divElement) {
+  async function initHelpContent (divElement) {
     var categories = {};
 
     for (var k in keyBindings) {
@@ -396,7 +396,9 @@ searxng.ready(function () {
     }
 
     var html = '<a href="#" class="close" aria-label="close" title="close">×</a>';
-    html += '<h3>How to navigate SearXNG with hotkeys</h3>';
+    var gettext = await searxng.http("GET", "/hotkey_menu.json").then(response => JSON.parse(response));
+
+    html += '<h3>'+ gettext['How to navigate SearXNG with hotkeys'] + '</h3>';
     html += '<table>';
 
     for (var i = 0; i < sorted.length; i++) {
@@ -410,11 +412,11 @@ searxng.ready(function () {
       }
       html += '<td>';
 
-      html += '<h4>' + cat[0].cat + '</h4>';
+      html += '<h4>' + gettext[cat[0].cat] + '</h4>';
       html += '<ul class="list-unstyled">';
 
       for (var cj in cat) {
-        html += '<li><kbd>' + cat[cj].key + '</kbd> ' + cat[cj].des + '</li>';
+        html += '<li><kbd>' + cat[cj].key + '</kbd> ' + gettext[cat[cj].des] + '</li>';
       }
 
       html += '</ul>';
@@ -424,20 +426,19 @@ searxng.ready(function () {
         html += '</tr>'; // row
       }
     }
-
     html += '</table>';
 
     divElement.innerHTML = html;
   }
 
-  function toggleHelp () {
+  async function toggleHelp () {
     var helpPanel = document.querySelector('#vim-hotkeys-help');
     if (helpPanel === undefined || helpPanel === null) {
       // first call
       helpPanel = document.createElement('div');
       helpPanel.id = 'vim-hotkeys-help';
       helpPanel.className = 'dialog-modal';
-      initHelpContent(helpPanel);
+      await initHelpContent(helpPanel);
       var body = document.getElementsByTagName('body')[0];
       body.appendChild(helpPanel);
     } else {

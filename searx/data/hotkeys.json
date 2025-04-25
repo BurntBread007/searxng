@@ -1,0 +1,26 @@
+{
+  "en": [
+    "remove focus from the focused input",
+    "copy url of the selected result to the clipboard",
+    "toggle help window",
+    "focus on the search input",
+    "go to next page",
+    "open search result",
+    "go to previous page",
+    "reload page from the server",
+    "open the result in a new tab",
+    "select previous search result",
+    "select next search result",
+    "scroll one page up",
+    "scroll one page down",
+    "scroll half a page up",
+    "scroll half a page down",
+    "scroll to the top of the page",
+    "scroll to the bottom of the page",
+    "How to navigate SearXNG with hotkeys",
+    "Results",
+    "Other",
+    "Control",
+    "Navigation"
+  ]
+}
