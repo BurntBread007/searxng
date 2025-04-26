@@ -28,9 +28,22 @@ def random_float():
     return str(random.random())
 
 
-def random_int():
-    random_int_max = 2**31
-    return str(random.randint(-random_int_max, random_int_max))
+def random_int(min = None, max = None):
+    if max is None and min is not None: 
+        max = min
+        min = None
+        random_int_min = 0
+        random_int_max = max
+    elif min is None and max is None: 
+        random_int_max = 2**31
+        random_int_min = -1 * random_int_max 
+    else:
+        random_int_max = max
+        random_int_min = min
+    return str(random.randint(random_int_min, random_int_max))
+
+def random_port():
+    return random_int(1000, 65535)
 
 
 def random_sha256():
@@ -57,6 +70,7 @@ class SXNGAnswerer(Answerer):
         "string": random_string,
         "int": random_int,
         "float": random_float,
+        "port": random_port,
         "sha256": random_sha256,
         "uuid": random_uuid,
         "color": random_color,
@@ -74,7 +88,11 @@ class SXNGAnswerer(Answerer):
     def answer(self, query: str) -> list[BaseAnswer]:
 
         parts = query.split()
-        if len(parts) != 2 or parts[1] not in self.random_types:
-            return []
-
+        if len(parts) < 2: return []
+        if parts[1] not in self.random_types: return []
+        
+        if parts[1] == "int":
+            if len(parts) > 3: return [Answer(answer=self.random_types[parts[1]](int(parts[2]), int(parts[3])))]
+            if len(parts) > 2: return [Answer(answer=self.random_types[parts[1]](int(parts[2])))]   
+        
         return [Answer(answer=self.random_types[parts[1]]())]
