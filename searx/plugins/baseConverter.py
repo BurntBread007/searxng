@@ -89,16 +89,21 @@ class SXNGPlugin(Plugin):
             return results
 
         function, string = m.groups()
+
+        # sets up a try for error catching
         try:
             data = str(string).split(" ")
             curBase = data.pop(0)
             number = data.pop(0)
 
+            # Checks if there is a target output base
             if len(data) > 0:
                 newBase = data.pop(0)
                 answer = "Base " + curBase + ": " + number + \
                     " -> Base " + newBase + ": " + \
                     str(convert_base(number, int(curBase), int(newBase)))
+
+            # If not target base it defualts to base 10
             else:
                 answer = "Base " + curBase + ": " + number + \
                     " -> Base 10: " + \
@@ -106,6 +111,10 @@ class SXNGPlugin(Plugin):
 
             results.add(results.types.Answer(answer=answer))
 
+        # IndexErrors are created by having less then 2 numbers as args
         except IndexError:
+            pass
+        # ValueErrors are created by passing a non valid base number
+        except ValueError:
             pass
         return results
